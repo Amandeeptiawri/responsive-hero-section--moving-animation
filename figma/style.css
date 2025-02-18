@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-section {
+  background: url("/images/Rectangle\ 58.svg") no-repeat center center/cover;
+  height: 520px; /* Fixed height as per Figma */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+
+/* Text Styling */
+.hero-content {
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Responsive Typography */
+.hero-content h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 18px;
+  max-width: 596px;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 55px;
+  }
+  .scrolling-wrapper span {
+    font-size: 14px;
+  }
+  .star {
+    font-size: 14px;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 50px;
+  }
+  .hero-content p {
+    font-size: 18px;
+  }
+}
+
+/* Scrolling Container */
+.scroll-container {
+  background: #d71718; /* Red Background */
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  white-space: nowrap;
+  margin-top: 77px;
+}
+
+/* Wrapper for seamless infinite scroll */
+.scrolling-wrapper {
+  display: flex;
+  width: max-content; /* Makes content as wide as needed */
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  } /* Moves continuously */
+}
+
+/* Star & Text Style */
+.scrolling-wrapper span {
+  color: white;
+  font-size: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  margin-right: 28px; /* Spacing between text */
+}
+
+.star {
+  color: white;
+  font-size: 16px;
+  margin: 0 10px;
+}
